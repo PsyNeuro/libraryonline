@@ -132,8 +132,8 @@
     <!-- Section-->
 
     <br>
-    <h2 class = center>Category: Ebooks/or genre</h2>
     <div class = "container">
+        <h2 class = center>Category: Ebooks/or genre</h2>
         <div class = "carousel">
 
     {% for book in books %}
@@ -142,7 +142,7 @@
                 <div>
                     <i class="fa fa-glass"></i>
                   </div>
-                  <p>{{book.name}}</p>
+                  <h5>{{book.name}}</h5>
                   <a href="#"><img src="{{book.image.url}}" alt="productimage" style="width:200px;height:200px;"></a>
                 </div>
     {% endfor %}

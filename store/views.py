@@ -11,7 +11,6 @@ import ebooklib.epub
 warnings.filterwarnings("ignore", category=UserWarning, module="ebooklib.epub")
 warnings.filterwarnings('ignore', category=FutureWarning, module='ebooklib.epub')
 
-import epub
 
 
 def home(request):
