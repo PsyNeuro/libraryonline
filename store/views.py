@@ -7,7 +7,6 @@ import warnings
 from bs4 import BeautifulSoup
 import ebooklib.epub
 
-
 warnings.filterwarnings("ignore", category=UserWarning, module="ebooklib.epub")
 warnings.filterwarnings('ignore', category=FutureWarning, module='ebooklib.epub')
 
@@ -38,3 +37,12 @@ def read(request,pk):
 
 def newpage(request):
     return render(request, "newpage.html", {})
+
+def input(request):
+    books = bookdetails.objects.all()
+    
+    if request.method == "POST":
+        print("POSTING?")
+        return render(request, "input.html", {"books": books})
+    
+    return render(request, "input.html", {"books": books})

@@ -1,0 +1,26 @@
+<table>
+    <tr><th>Name</th><th>Author</th><th>Category</th><th>Genre</th></tr>
+    {% for book in books  %}
+    <tr>
+        <td>{{book.name}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.category}}</td>
+        <td>{{book.genre}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<br><br><br><br>
+<h1>Book/ebook input</h1>
+
+<form action="/input_page.php" method = "post">
+  <label for="locallink">Local Link:</label>
+  <input type="text" id="locallink" name="locallink"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+

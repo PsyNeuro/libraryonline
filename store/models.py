@@ -13,7 +13,7 @@ class bookdetails(models.Model):
     textlink = models.CharField(max_length=1000)
     image = models.ImageField(upload_to="uploads/product", blank=True, null=True)
     description = models.CharField(max_length=250, default="", blank=True, null=True)
-    
+    genre = models.CharField(max_length=50, default="None")
     
     def __str__(self):
         return self.name
